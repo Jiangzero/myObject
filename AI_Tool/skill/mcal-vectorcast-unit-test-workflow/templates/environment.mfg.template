@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manage-config-options version="7">
+    <config>
+        <key>COVERAGE_TYPE</key>
+        <value>{{COVERAGE_TYPE}}</value>
+    </config>
+    <search-directory type="TESTABLE_SOURCE_DIR">{{GENERATED_INCLUDE_DIR}}</search-directory>
+    <search-directory type="TESTABLE_SOURCE_DIR">{{GENERATED_SOURCE_DIR}}</search-directory>
+    <search-directory type="TESTABLE_SOURCE_DIR">{{DEPENDENCY_DIRECTORY}}</search-directory>
+</manage-config-options>

@@ -1,0 +1,49 @@
+/*
+ ============================================================================
+ Name        : main.c (性能测试入口模板)
+ Description : MCAL 初始化序列 + 调用 SIT_<Module>_TEST()
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include "Mcu.h"
+#include "Mcu_Drv.h"
+#include "Base_Drv.h"
+#include "Port_Drv.h"
+#include "Uart_Drv.h"
+#include "Platform_Drv.h"
+#include "test.h"
+
+int main(void)
+{
+    uint32 SystemClock = 0;
+
+    Base_Drv_Init();
+
+    Mcu_Init(NULL_PTR);
+#if (MCU_INIT_CLOCK == STD_ON)
+    Mcu_InitClock(0);
+#endif
+#if (MCU_NO_PLL == STD_OFF)
+    while( MCU_PLL_LOCKED != Mcu_GetPllStatus())
+    {
+        /* Busy wait until the system PLL is locked */
+    }
+    Mcu_DistributePllClock();
+#endif
+    Port_Drv_Init(&Port_ConfigData);
+    Uart_Drv_Init(NULL_PTR);
+
+    Platform_Drv_Init(NULL_PTR);
+
+    Mcu_Drv_Clk_GetPeriph(MCU_CLOCK_SYSTEM, &SystemClock);
+    printf("Frequency of processor %dMHZ\r\n", SystemClock / 1000 / 1000);
+
+    /* 调用目标驱动性能测试用例，例如 SIT_ADC_TEST(); */
+    SIT_ADC_TEST();
+
+    while (1)
+    {
+
+    }
+}

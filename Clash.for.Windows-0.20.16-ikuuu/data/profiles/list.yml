@@ -1,0 +1,41 @@
+files:
+  - url: ""
+    time: 1720661747733.yml
+    name: config.yaml
+    selected: []
+  - time: 1778463828624.yml
+    name: iKuuu_V2.yaml
+    url: https://2wmca.no-mad-sub.one/link/JZpCAhVz0ah2i4kf?clash=3&extend=1
+    selected:
+      - name: GLOBAL
+        now: DIRECT
+      - name: 🔰 选择节点
+        now: 🇭🇰 香港W01
+      - name: 🌏 爱奇艺&哔哩哔哩
+        now: DIRECT
+      - name: 📺 动画疯
+        now: 🔰 选择节点
+      - name: 🎮 Steam 登录/下载
+        now: DIRECT
+      - name: 🎮 Steam 商店/社区
+        now: 🔰 选择节点
+      - name: 🌩️ Cloudflare
+        now: 🔰 选择节点
+      - name: ☁️ OneDrive
+        now: 🔰 选择节点
+      - name: 🎓学术网站
+        now: DIRECT
+      - name: 🇨🇳 国内网站
+        now: DIRECT
+      - name: 🛑 拦截广告
+        now: REJECT
+      - name: 🐟 漏网之鱼
+        now: 🔰 选择节点
+    interval: 6
+    subInfo:
+      upload: 3991251907
+      download: 45167540113
+      total: 322122547200
+      expire: 1794019146
+    homeWeb: https://ikuuu.top
+index: 1
